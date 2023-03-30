@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "security-jdbc.user",
+    "type": "java.lang.String",
+    "description": "Devuelve el username y el password para el proceso de autenticación"
+  },
+  {
+    "name": "security.jdbc-authorities",
+    "type": "java.lang.String",
+    "description": "Devuelve el username y el Rol o la autoridad para el proceso de autenticación"
+  }
+]}

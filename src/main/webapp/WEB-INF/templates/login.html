@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta name="author" content="Darvis Trillos Ariza">
+	<meta name="description" content="Login de la herramienta de pruebas HTTP">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<title>Login - Metodos Http</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/public/css/login.css}">
+</head>
+
+<body>
+	<div id="contenedor">
+		<div id="central">
+			<div id="login">
+				<div class="titulo">
+					Login
+				</div>
+				<p th:if="${loginError}" class="error">Usuario inválido</p>
+				<form th:action="@{/perform_login}" method="post" id="loginform">
+					<label for="username">Usuario</label>:
+					<input type="text" id="username" name="username" placeholder="Usuario" autofocus="autofocus" /> <br />
+					<label for="password">Contraseña</label>:
+					<input type="password" id="password" name="password" placeholder="•••••••••" /> <br />
+					<input type="submit" value="Entrar" />
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
